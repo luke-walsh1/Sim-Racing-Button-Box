@@ -5,5 +5,6 @@ Racing Simulator Button Box to add extra inputs to any setup.
 
 
 # Features
-14 inputs
+14 inputs 
+
 Bottom mounting holes for mounting to 4080 aluminium extrusion
