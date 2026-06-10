@@ -12,5 +12,6 @@ Racing Simulator Button Box to add extra inputs to any setup.
 
 M5 Bottom mounting holes for mounting to 4080 aluminium extrusion
 
-#software
+# software
 The button box is made into a hid (human input device) using [Dahl Design DDC](https://github.com/andreasdahl1987/DahlDesignDDC)
+Using one of the FastDDC Code presets make wiring easy because it makes every pin an input, meaning that you can solder the components to any pin.
