@@ -1,2 +1,2 @@
 # Sim-Racing-Button-Box
-Racing Button Box for my simulator to add extra inputs to any setup.
+Racing Simulator Button Box to add extra inputs to any setup.
