@@ -5,6 +5,12 @@ Racing Simulator Button Box to add extra inputs to any setup.
 
 
 # Features
-14 inputs 
+14 inputs :
+4 buttons
+1 switch
+1 8 way rotary encoder
 
-Bottom mounting holes for mounting to 4080 aluminium extrusion
+M5 Bottom mounting holes for mounting to 4080 aluminium extrusion
+
+#software
+The button box is made into a hid (human input device) using (https://github.com/andreasdahl1987/DahlDesignDDC)
