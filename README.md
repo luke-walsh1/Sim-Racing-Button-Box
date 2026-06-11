@@ -1,4 +1,3 @@
-<img width="1044" height="503" alt="sdadasda" src="https://github.com/user-attachments/assets/1c976bed-1a57-4ebf-bc12-135c1cb3f3d5" />
 # Sim-Racing-Button-Box
 Racing Simulator Button Box to add extra inputs to any setup.
 
