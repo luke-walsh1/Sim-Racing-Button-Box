@@ -22,4 +22,3 @@ The button box is made into a hid (human input device) using [Dahl Design DDC](h
 Using one of the FastDDC Code presets make wiring easy because it makes every pin an input, meaning that you can solder the components to any pin.
 
 
-<img width="3000" height="4000" alt="20260611_182203" src="https://github.com/user-attachments/assets/5ec83a48-cb6e-45fa-94ed-fd2569a9f113" />
