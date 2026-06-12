@@ -1,43 +1,26 @@
-# Sim-Racing-Button-Box
-Racing Simulator Button Box to add extra inputs to any setup.
-
-Please Use V2 Files for 3D printing.
-
-No supports for body.
-
-
-<img width="1081" height="693" alt="Capture2" src="https://github.com/user-attachments/assets/164dd837-06b6-4c0d-8c8f-128a42a96b66" />
-
-
-# Features
-14 inputs :
-4 buttons
-1 switch
-1 8 way rotary encoder
-
-M5 Bottom mounting holes for mounting to 4080 aluminium extrusion
-
-<img width="1044" height="503" alt="sdadasda" src="https://github.com/user-attachments/assets/1c976bed-1a57-4ebf-bc12-135c1cb3f3d5" />
-
-# software
-The button box is made into a hid (human input device) using [Dahl Design DDC](https://github.com/andreasdahl1987/DahlDesignDDC)
-Using one of the FastDDC Code presets make wiring easy because it makes every pin an input, meaning that you can solder the components to any pin.
 
 # Raspberry Pi Pico Standalone Button Box
 
 A plug-and-play USB HID button box built using a Raspberry Pi Pico (RP2040) running Arduino-based firmware. Designed primarily for sim racing (Assetto Corsa, iRacing, ETS2) and flight simulation, this controller features direct-wired inputs utilizing "Pulse-on-Change" logic to prevent stuck inputs from latching toggle and rotary switches.
+
+<img width="1081" height="693" alt="Capture2" src="https://github.com/user-attachments/assets/164dd837-06b6-4c0d-8c8f-128a42a96b66" />
+
+---
 
 ## Features
 
 * **14 Fully Mapped Inputs:**
   * 4 momentary pushbuttons.
   * 1 two-way toggle/latching switch (mapped as 2 independent inputs).
+  * M5 Bottom mounting holes for mounting to 4080 aluminium extrusion.
   * 1 eight-way rotary switch (mapped as 8 independent inputs).
 * **Direct-Input Wiring:** Eliminates the need for a matrix grid, reducing complex wiring layouts.
 * **Zero Diodes Required:** Because the build layout guarantees individual or sequential input handling, no anti-ghosting diodes are needed.
 * **Pulse-on-Change Logic:** Prevents multi-position rotary dials and toggle switches from holding a Windows button down permanently. Turning to a position triggers a clean, 80ms momentary pulse before releasing, ensuring perfect game compatibility.
 
 ---
+
+<img width="1044" height="503" alt="sdadasda" src="https://github.com/user-attachments/assets/1c976bed-1a57-4ebf-bc12-135c1cb3f3d5" />
 
 ## Pinout Configuration
 
