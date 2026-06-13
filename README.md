@@ -47,6 +47,8 @@ The controller uses 14 sequential GPIO pins on the Raspberry Pi Pico. All compon
 
 ## Schematic & Wiring Logic
 
+IMPORTANT : Keep wires relativley long to allow opening of the front plate for the mounting screws.
+
 ```text
 [Button 1] -------------------> GPIO 0
 [Button 2] -------------------> GPIO 1
