@@ -44,27 +44,6 @@ The controller uses 14 sequential GPIO pins on the Raspberry Pi Pico. All compon
 | **8-Way Rotary** | Position 8 | **GPIO 13** | Button 14 (80ms Pulse) |
 
 ---
-## Schematic & Wiring Logic
-
-IMPORTANT : Keep wires relativley long to allow opening of the front plate for the mounting screws.
-
-
-[Button 1] -------------------> GPIO 0
-[Button 2] -------------------> GPIO 1
-[Button 3] -------------------> GPIO 2
-[Button 4] -------------------> GPIO 3
-
-[2-Way Toggle Pos 1] ---------> GPIO 4
-[2-Way Toggle Pos 2] ---------> GPIO 5
-
-[8-Way Rotary Pos 1] ---------> GPIO 6
-[8-Way Rotary Pos 2] ---------> GPIO 7
-...
-[8-Way Rotary Pos 8] ---------> GPIO 13
-
-ALL COMMON / GND PINS -------> [Linked Together] -------> Pico GND (e.g., Pin 3)
-
-
 
 
 ## Code
