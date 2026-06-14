@@ -44,12 +44,84 @@ The controller uses 14 sequential GPIO pins on the Raspberry Pi Pico. All compon
 | **8-Way Rotary** | Position 8 | **GPIO 13** | Button 14 (80ms Pulse) |
 
 ---
-
 ## Schematic & Wiring Logic
 
 IMPORTANT : Keep wires relativley long to allow opening of the front plate for the mounting screws.
 
+
+[Button 1] -------------------> GPIO 0
+[Button 2] -------------------> GPIO 1
+[Button 3] -------------------> GPIO 2
+[Button 4] -------------------> GPIO 3
+
+[2-Way Toggle Pos 1] ---------> GPIO 4
+[2-Way Toggle Pos 2] ---------> GPIO 5
+
+[8-Way Rotary Pos 1] ---------> GPIO 6
+[8-Way Rotary Pos 2] ---------> GPIO 7
+...
+[8-Way Rotary Pos 8] ---------> GPIO 13
+
+ALL COMMON / GND PINS -------> [Linked Together] -------> Pico GND (e.g., Pin 3)
+
+
+
+
+## Code
+
 ```text
+
+#include <Joystick.h>
+
+const int NUM_BUTTONS = 14;
+const int BUTTON_PINS[NUM_BUTTONS] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+int lastButtonState[NUM_BUTTONS] = {0};
+
+// REMOVED: Joystick_ Joystick; (The RP2040 core creates this automatically!)
+
+void setup() {
+  for (int i = 0; i < NUM_BUTTONS; i++) {
+    pinMode(BUTTON_PINS[i], INPUT_PULLUP); 
+    lastButtonState[i] = !digitalRead(BUTTON_PINS[i]); 
+  }
+  
+  Joystick.begin(); 
+}
+
+void loop() {
+  // 1. STANDARD PUSHBUTTONS (Pins 0 to 3)
+  for (int i = 0; i <= 3; i++) {
+    int currentButtonState = !digitalRead(BUTTON_PINS[i]);
+    if (currentButtonState != lastButtonState[i]) {
+      Joystick.setButton(i, currentButtonState);
+      lastButtonState[i] = currentButtonState;
+    }
+  }
+
+  // 2. 2-WAY SWITCH & 8-WAY ROTARY (Pins 4 to 13)
+  for (int i = 4; i < NUM_BUTTONS; i++) {
+    int currentSwitchState = !digitalRead(BUTTON_PINS[i]);
+    if (currentSwitchState != lastButtonState[i]) {
+      if (currentSwitchState == 1) {
+        Joystick.setButton(i, 1); 
+        delay(80);                
+        Joystick.setButton(i, 0); 
+      }
+      lastButtonState[i] = currentSwitchState; 
+    }
+  }
+  
+  delay(10); 
+}
+
+
+```
+## Schematic & Wiring Logic
+
+IMPORTANT : Keep wires relatively long to allow opening of the front plate for the mounting screws.
+
+```text
+
 [Button 1] -------------------> GPIO 0
 [Button 2] -------------------> GPIO 1
 [Button 3] -------------------> GPIO 2
