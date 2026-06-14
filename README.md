@@ -48,6 +48,8 @@ The controller uses 14 sequential GPIO pins on the Raspberry Pi Pico. All compon
 
 ## Code
 
+Copy the code and paste it into arduino ide and upload to the raspberry pi pico.
+
 ```text
 
 #include <Joystick.h>
@@ -114,3 +116,7 @@ IMPORTANT : Keep wires relatively long to allow opening of the front plate for t
 [8-Way Rotary Pos 8] ---------> GPIO 13
 
 ALL COMMON / GND PINS -------> [Linked Together] -------> Pico GND (e.g., Pin 3)
+
+```
+
+Also on my Printables : (https://www.printables.com/model/1750208-sim-racing-button-box)
