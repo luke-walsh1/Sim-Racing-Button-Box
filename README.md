@@ -3,6 +3,9 @@
 
 A plug-and-play USB HID button box built using a Raspberry Pi Pico (RP2040) running Arduino-based firmware. Designed primarily for sim racing (Assetto Corsa, iRacing, ETS2) and flight simulation, this controller features direct-wired inputs utilizing "Pulse-on-Change" logic to prevent stuck inputs from latching toggle and rotary switches.
 
+<img width="4032" height="3024" alt="image" src="https://github.com/user-attachments/assets/1cd00f6a-bb46-49db-bf7c-d8902de78f42" />
+
+
 <img width="1081" height="693" alt="Capture2" src="https://github.com/user-attachments/assets/164dd837-06b6-4c0d-8c8f-128a42a96b66" />
 
 ---
